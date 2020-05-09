@@ -1,20 +1,20 @@
 local defaultConfig = {
 
 	main = {
-		frame = "#000000",
+		frame = "#292c31",
 		highlight = "#00AEEF",
-		background = "#CCCCEE",
-		underlay = "#CCCCEE",
+		background = "#1b2123",
+		underlay = "#1b2123",
 		warning = "#EEBB00",
 		enabled = "#4CBB17",
 		disabled = "#666666",
 		negative = "#FF9999",
 		positive = "#66ccff",
-		headerText = "#FFFFFF",
-		headerFrameText = "#FFFFFF",
+		headerText = "#F7F7F7",
+		headerFrameText = "#F7F7F7",
 		transition = "#888888",
 		tabFrame = "#333333",
-		tabButton = "#FFFFFF",
+		tabButton = "#F7F7F7",
 	},
 
 	clearType = {
@@ -63,7 +63,7 @@ local defaultConfig = {
 	},
 
 	grades = {
-		Grade_Tier01 = "#ffffff", -- AAAAA
+		Grade_Tier01 = "#F7F7F7", -- AAAAA
 		Grade_Tier02 = "#66ccff", -- AAAA:
 		Grade_Tier03 = "#66ccff", -- AAAA.
 		Grade_Tier04 = "#66ccff", -- AAAA
@@ -105,7 +105,7 @@ local defaultConfig = {
 
 	songLength = {
 		short = "#666666", -- grey
-		normal = "#FFFFFF", -- normal
+		normal = "#F7F7F7", -- normal
 		long = "#ff9a00", --orange
 		marathon = "#da5757", -- red
 		ultramarathon = "#c97bff" -- purple
@@ -139,25 +139,25 @@ local defaultConfig = {
 
 	evaluation = {
 		BackgroundText = "#000000",
-		ScoreCardText = "#FFFFFF",
-		ScoreCardDivider = "#FFFFFF",
-		ScoreCardCategoryText = "#FFFFFF",
-		ScoreBoardText = "#FFFFFF",
+		ScoreCardText = "#F7F7F7",
+		ScoreCardDivider = "#F7F7F7",
+		ScoreCardCategoryText = "#F7F7F7",
+		ScoreBoardText = "#F7F7F7",
 	},
 
 	selectMusic = {
-		MusicWheelTitleText = "#FFFFFF",
-		MusicWheelSubtitleText = "#FFFFFF",
-		MusicWheelArtistText = "#FFFFFF",
-		MusicWheelSectionCountText = "#FFFFFF",
-		MusicWheelDivider = "#FFFFFF",
+		MusicWheelTitleText = "#F7F7F7",
+		MusicWheelSubtitleText = "#F7F7F7",
+		MusicWheelArtistText = "#F7F7F7",
+		MusicWheelSectionCountText = "#F7F7F7",
+		MusicWheelDivider = "#F7F7F7",
 		UnfinishedGoalGradient = "#FF66FF",
 		CompletedGoalGradient = "#66FF66",
 		MusicWheelExtraColor = "#FFCCCC",
-		ProfileCardText = "#FFFFFF",
-		TabContentText = "#FFFFFF",
-		BannerText = "#FFFFFF",
-		StepsDisplayListText = "#FFFFFF"
+		ProfileCardText = "#F7F7F7",
+		TabContentText = "#F7F7F7",
+		BannerText = "#F7F7F7",
+		StepsDisplayListText = "#F7F7F7"
 	},
 
 	miscellaneous = {
@@ -205,11 +205,11 @@ function getGradeColor(grade)
 end
 
 function getDifficultyColor(diff)
-	return color(colorConfig:get_data().difficulty[diff]) or color("#ffffff")
+	return color(colorConfig:get_data().difficulty[diff]) or color("#F7F7F7")
 end
 
 function getPaceMakerColor(type)
-	return color(colorConfig:get_data().gameplay["Pacemaker"..type]) or color("#ffffff")
+	return color(colorConfig:get_data().gameplay["Pacemaker"..type]) or color("#F7F7F7")
 end
 
 function getMiscColor(type)
@@ -332,7 +332,7 @@ function getBorderColor()
 	return HSV(Hour()*360/12, 0.7, 1)
 end
 
-function TapNoteScoreToColor(tns) return color(colorConfig:get_data().judgment[tns]) or color("#ffffff") end
+function TapNoteScoreToColor(tns) return color(colorConfig:get_data().judgment[tns]) or color("#F7F7F7") end
 
 function byJudgment(judge)
 	return color(colorConfig:get_data().judgment[judge])
