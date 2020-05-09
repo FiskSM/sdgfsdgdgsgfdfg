@@ -4,7 +4,7 @@ local maxDistY = SCREEN_HEIGHT*magnitude
 
 local enabled = themeConfig:get_data().global.SongBGEnabled
 local moveBG = themeConfig:get_data().global.SongBGMouseEnabled and enabled
-local brightness = 0.3
+local brightness = 0.7
 
 local function getPosX()
 	local offset = magnitude*(INPUTFILTER:GetMouseX()-SCREEN_CENTER_X)
