@@ -1,13 +1,13 @@
 local defaultGameplayCoordinates = {
-	JudgeX = 0,
-	JudgeY = 40,
-	ComboX = 30,
-	ComboY = -20,
+	JudgeX = -5,
+	JudgeY = -40,
+	ComboX = 5,
+	ComboY = -125,
 	ErrorBarX = SCREEN_CENTER_X,
 	ErrorBarY = SCREEN_CENTER_Y + 53,
 	TargetTrackerX = SCREEN_CENTER_X + 26,
 	TargetTrackerY = SCREEN_CENTER_Y + 30,
-	JudgeCounterX = 0,
+	JudgeCounterX = 50,
 	JudgeCounterY = SCREEN_CENTER_Y - 80,
 	DisplayPercentX = 80,
 	DisplayPercentY = SCREEN_CENTER_Y - 92,
@@ -32,8 +32,8 @@ local defaultGameplayCoordinates = {
 }
 
 local defaultGameplaySizes = {
-	JudgeZoom = 1.0,
-	ComboZoom = 0.6,
+	JudgeZoom = 0.9,
+	ComboZoom = 1.25,
 	ErrorBarWidth = 240,
 	ErrorBarHeight = 10,
 	TargetTrackerZoom = 0.4,
@@ -58,7 +58,7 @@ local defaultGameplaySizes = {
 
 
 local defaultConfig = {
-	ScreenFilter = 0,
+	ScreenFilter = 1,
 	JudgeType = 2, -- type for the judge counter
 	AvgScoreType = 0,
 	GhostScoreType = 0,
@@ -74,13 +74,13 @@ local defaultConfig = {
 	LaneCover = 0, -- soon to be changed to: 0=off, 1=sudden, 2=hidden
 	LaneCoverHeight = 0,
 	--LaneCoverLayer = 350, -- notefield_draw_order.under_explosions
-	DisplayPercent = true,
+	DisplayPercent = false,
 	DisplayMean = false,
 	NPSDisplay = false,
 	NPSGraph = false,
 	--NPSUpdateRate = 0.1,
 	--NPSMaxVerts = 300,
-	ReceptorSize = 100,
+	ReceptorSize = 99,
 	CBHighlight = false,
 	FCEffect = true,
 	Username = "",

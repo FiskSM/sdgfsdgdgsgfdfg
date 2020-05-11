@@ -29,7 +29,7 @@ local LabelMaxZoom = 0.75 * 0.75
 
 local function arbitraryComboX(value) 
 	c.Label:x(value) 
-	c.Number:x(value - 4)
+	c.Number:x(value)
 	c.Border:x(value)
   end 
 
@@ -54,15 +54,13 @@ local labelMG = getComboColor("LabelMissGradient")
 
 local t = Def.ActorFrame {
 
-	LoadFont( "Combo", "numbers" ) .. {
+	LoadFont( "Common", "BLarge" ) .. {
 		Name="Number",
 		InitCommand = function(self)
-			self:xy(MovableValues.ComboX, MovableValues.ComboY):skewx(-0.125):visible(
-				false
-			)
+			self:xy(MovableValues.ComboX, MovableValues.ComboY):visible(false)
 		end,
 		OnCommand = function(self)
-			self:shadowlength(1):skewx(-0.125)
+			self:shadowlength(1)
 		end
 	},
 	LoadFont("Common Normal") .. {
@@ -100,8 +98,8 @@ local t = Def.ActorFrame {
 			c.Number:visible(true)
 			c.Label:visible(wordsOn)
 			c.Number:settext(1000)
-			Movable.DeviceButton_3.propertyOffsets = {self:GetTrueX() -6, self:GetTrueY() + c.Number:GetHeight()*1.5}	-- centered to screen/valigned
-			setBorderAlignment(c.Border, 0.5, 1)
+			--Movable.DeviceButton_3.propertyOffsets = {self:GetTrueX(), self:GetTrueY() + c.Number:GetHeight()*1.5}	-- centered to screen/valigned
+			--setBorderAlignment(c.Border, 0.5, 1)
 		end
 		arbitraryComboZoom(MovableValues.ComboZoom)
 	end,
@@ -122,12 +120,6 @@ local t = Def.ActorFrame {
 		end
 
 		c.Label:settext( labeltext )
-
-		param.Zoom = scale( iCombo, 0, NumberMaxZoomAt, NumberMinZoom, NumberMaxZoom )
-		param.Zoom = clamp( param.Zoom, NumberMinZoom, NumberMaxZoom )
-		
-		param.LabelZoom = scale( iCombo, 0, NumberMaxZoomAt, LabelMinZoom, LabelMaxZoom )
-		param.LabelZoom = clamp( param.LabelZoom, LabelMinZoom, LabelMaxZoom )
 		
 		c.Number:visible(true)
 		c.Label:visible(wordsOn)
