@@ -9,7 +9,7 @@ local function ScreenFilter()
 		PlayerStateSetCommand = function(self,param)
 			local pn = param.PlayerNumber
 			local style = GAMESTATE:GetCurrentStyle(pn)
-			local width = style:GetWidth(pn) + 18
+			local width = style:GetWidth(pn) + 24
 			local filterColor = color(colorConfig:get_data().gameplay.ScreenFilter)
 			local filterAlpha = playerConfig:get_data(pn_to_profile_slot(pn)).ScreenFilter
 			if filterAlpha == 0 then
