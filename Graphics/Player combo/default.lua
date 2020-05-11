@@ -57,12 +57,12 @@ local t = Def.ActorFrame {
 	LoadFont( "Combo", "numbers" ) .. {
 		Name="Number",
 		InitCommand = function(self)
-			self:xy(MovableValues.ComboX - 4, MovableValues.ComboY):halign(1):valign(1):skewx(-0.125):visible(
+			self:xy(MovableValues.ComboX, MovableValues.ComboY):skewx(-0.125):visible(
 				false
 			)
 		end,
 		OnCommand = function(self)
-			self:shadowlength(1):halign(1):valign(1):skewx(-0.125)
+			self:shadowlength(1):skewx(-0.125)
 		end
 	},
 	LoadFont("Common Normal") .. {
