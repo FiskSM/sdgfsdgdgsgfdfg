@@ -21,54 +21,48 @@ JudgmentMissCommand=shadowlength,0;diffusealpha,1;zoom,1;linear,0.8;sleep,0.8;li
 
 local JudgeCmds = {
 	TapNoteScore_W1 = function(self)
-		self:shadowlength(0):diffusealpha(1):zoom(1.3 * MovableValues.JudgeZoom)
-		self:linear(0.05):zoom(1 * MovableValues.JudgeZoom)
+		self:shadowlength(0):diffusealpha(1)
 		self:sleep(0.8):linear(0.1)
-		self:zoomx(0.5 * MovableValues.JudgeZoom)
-		self:zoomy(2 * MovableValues.JudgeZoom)
+		self:zoomx(MovableValues.JudgeZoom)
+		self:zoomy(MovableValues.JudgeZoom)
 		self:diffusealpha(0)
 		self:glowblink():effectperiod(0.05):effectcolor1(color("1,1,1,0")):effectcolor2(color("1,1,1,0.25"))
 	end,
 	TapNoteScore_W2 = function(self)
-		self:shadowlength(0):diffusealpha(1):zoom(1.3 * MovableValues.JudgeZoom)
-		self:linear(0.05):zoom(1 * MovableValues.JudgeZoom)
+		self:shadowlength(0):diffusealpha(1)
 		self:sleep(0.8):linear(0.1)
-		self:zoomx(0.5 * MovableValues.JudgeZoom)
-		self:zoomy(2 * MovableValues.JudgeZoom)
+		self:zoomx(MovableValues.JudgeZoom)
+		self:zoomy(MovableValues.JudgeZoom)
 		self:diffusealpha(0)
 	end,
 	TapNoteScore_W3 = function(self)
-		self:shadowlength(0):diffusealpha(1):zoom(1.2 * MovableValues.JudgeZoom)
-		self:linear(0.05):zoom(1 * MovableValues.JudgeZoom)
+		self:shadowlength(0):diffusealpha(1)
 		self:sleep(0.8):linear(0.1)
-		self:zoomx(0.5 * MovableValues.JudgeZoom)
-		self:zoomy(2 * MovableValues.JudgeZoom)
+		self:zoomx(MovableValues.JudgeZoom)
+		self:zoomy(MovableValues.JudgeZoom)
 		self:diffusealpha(0)
 	end,
 	TapNoteScore_W4 = function(self)
-		self:shadowlength(0):diffusealpha(1):zoom(1.1 * MovableValues.JudgeZoom)
-		self:linear(0.05):zoom(1 * MovableValues.JudgeZoom)
+		self:shadowlength(0):diffusealpha(1)
 		self:sleep(0.8):linear(0.1)
-		self:zoomx(0.5 * MovableValues.JudgeZoom)
-		self:zoomy(2 * MovableValues.JudgeZoom)
+		self:zoomx(MovableValues.JudgeZoom)
+		self:zoomy(MovableValues.JudgeZoom)
 		self:diffusealpha(0)
 	end,
 	TapNoteScore_W5 = function(self)
-		self:shadowlength(0):diffusealpha(1):zoom(1.0 * MovableValues.JudgeZoom)
+		self:shadowlength(0):diffusealpha(1)
 		self:vibrate()
 		self:effectmagnitude(0.01,0.02,0.02)
 		self:sleep(0.8)
 		self:linear(0.1)
-		self:zoomx(0.5 * MovableValues.JudgeZoom)
-		self:zoomy(2 * MovableValues.JudgeZoom)
+		self:zoomx(MovableValues.JudgeZoom)
+		self:zoomy(MovableValues.JudgeZoom)
 		self:diffusealpha(0)
 	end,
 	TapNoteScore_Miss = function(self)
-		self:shadowlength(0):diffusealpha(1):zoom(1.0 * MovableValues.JudgeZoom)
-		self:linear(0.8)
-		self:sleep(0.8):linear(0.1)
-		self:zoomx(0.5 * MovableValues.JudgeZoom)
-		self:zoomy(2 * MovableValues.JudgeZoom)
+		self:shadowlength(0):diffusealpha(1)
+		self:zoomx(MovableValues.JudgeZoom)
+		self:zoomy(MovableValues.JudgeZoom)
 		self:diffusealpha(0)
 	end
 }
@@ -116,7 +110,7 @@ local t = Def.ActorFrame {
 			Movable.DeviceButton_2.condition = true
 			Movable.DeviceButton_2.DeviceButton_up.arbitraryFunction = judgmentZoom
 			Movable.DeviceButton_2.DeviceButton_down.arbitraryFunction = judgmentZoom
-			Movable.DeviceButton_1.propertyOffsets = {self:GetTrueX() , self:GetTrueY() - c.Judgment:GetHeight()}	-- centered to screen/valigned
+			--Movable.DeviceButton_1.propertyOffsets = {self:GetTrueX() , self:GetTrueY() - c.Judgment:GetHeight()}	-- centered to screen/valigned
 		end
 	end,
 
